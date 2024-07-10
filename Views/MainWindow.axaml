@@ -17,7 +17,7 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <ComboBox  md:ComboBoxAssist.Label="Sample" 
+    <ComboBox  md:ComboBoxAssist.Label="Sample1" 
                HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" FontSize="32"
          ItemsSource="{Binding Items}" 
               SelectedItem="{Binding SelectedItem}"/>

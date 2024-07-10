@@ -1,0 +1,27 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="MaterialComboBoxSample.App"
+             xmlns:themes="clr-namespace:Material.Styles.Themes;assembly=Material.Styles"
+             xmlns:local="using:MaterialComboBoxSample"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+  
+             <Application.Styles>
+                 <themes:MaterialTheme BaseTheme="Dark" PrimaryColor="DeepPurple" SecondaryColor="Indigo">
+                     <themes:MaterialTheme.Resources>
+                         <ResourceDictionary>
+                             <ResourceDictionary.ThemeDictionaries>
+                                 <ResourceDictionary x:Key="{x:Static themes:Theme.MaterialLight}">
+                                 </ResourceDictionary>
+                                 <ResourceDictionary x:Key="{x:Static themes:Theme.MaterialDark}">
+                                 </ResourceDictionary>
+                             </ResourceDictionary.ThemeDictionaries>
+                         </ResourceDictionary>
+                     </themes:MaterialTheme.Resources>
+                 </themes:MaterialTheme>
+             </Application.Styles>
+</Application>

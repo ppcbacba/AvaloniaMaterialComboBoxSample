@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:MaterialComboBoxSample.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="MaterialComboBoxSample.Views.MainWindow"
+        
+        xmlns:md="clr-namespace:Material.Styles.Assists;assembly=Material.Styles"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="MaterialComboBoxSample">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <ComboBox  md:ComboBoxAssist.Label="Sample" 
+               HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" FontSize="32"
+         ItemsSource="{Binding Items}" 
+              SelectedItem="{Binding SelectedItem}"/>
+
+</Window>
